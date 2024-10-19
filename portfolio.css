@@ -1,0 +1,401 @@
+* {
+    font-family: "Noto Serif", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navi a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navi a:hover {
+    color: #FA4EAB;
+    cursor: pointer;
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.sec1{
+    max-height: 100vh;
+}
+.main {
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: rgb(14, 14, 14);
+    justify-content: space-between;
+}
+
+.main h2 {
+    color: whitesmoke;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #FA4EAB;
+    font-size: 2.1em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: whitesmoke;
+    font-size: 1.7em;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main .pic img{
+    max-width: 100%;
+    border-radius: 100px;
+    max-height: 100vh;
+    margin-bottom: 200px;
+}
+
+.pic{
+    margin-bottom: 200px;
+}
+.main-btn {
+    color: whitesmoke;
+    background-color: #FA4EAB;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    transition: 0.5s ease;
+}
+
+.main-btn:hover {
+    background-color: #fa4eaae1;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.social a {
+    color: whitesmoke;
+    font-size: 1.7em;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    border-radius: 15px;
+}
+
+#skills h2,
+#projects h2,
+#resume h2,
+#contact h2 {
+    color: black;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#skills .content {
+    margin-top: 2rem;
+    border-radius: 15px;
+}
+
+#skills .content .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+}
+
+#skills .content .row .item {
+    background-color: #040D12;
+    margin: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+#skills .content .row .item:hover {
+    box-shadow: 0 4px 8px rgba(73, 73, 73, 0.961);
+}
+
+#skills .content .row .item i {
+    color: #FA4EAB;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#skills .content .row .item p {
+    font-size: 18px;
+    font-weight: 600;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+
+#projects .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: black;
+    border: 1px solid black;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    margin: 20px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.card:hover .image {
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+.image img {
+    width: 100%;
+}
+
+.info {
+    padding: 1em;
+    color: white;
+}
+
+.cat {
+    font-size: 0.8em;
+}
+
+.ptitle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 800;
+}
+
+.view {
+    text-decoration: none;
+    color: #FA4EAB;
+}
+
+.view:hover {
+    color: #fa4eaae1;
+    cursor: pointer;
+}
+
+.cv {
+    align-content: center;
+}
+
+.cv i {
+    color: #FA4EAB;
+    font-size: 1.5em;
+}
+
+.cv:hover i {
+    color: #fa4eaae1;
+    cursor: pointer;
+}
+
+#resume .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 70%;
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #FA4EAB;
+    box-shadow: 0 0 8px rgba(250, 78, 171, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #FA4EAB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: #fa4eaae1;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#contact {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+#contact .container {
+    max-width: 700px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+}
+
+#contact .text-primary {
+    color: #FA4EAB;
+}
+
+.leetcode {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    margin-left: 10px;
+}
+
+.leetcode:hover {
+    cursor: pointer;
+}
+
+.social a img.leetcode {
+    filter: invert(100%);
+}
+
+@media (max-width: 1023px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    .navi a {
+        padding-left: 10px;
+    }
+
+    #skills h2,
+    #projects h2,
+    #resume h2,
+    #contact h2{
+        font-size: 1.8em;
+    }
+
+    section{
+        padding: 80px 20px;
+    }
+
+    .main h2 {
+        font-size: 1em;
+    }
+
+    .main h2 span {
+        font-size: 2em;
+    }
+
+    .main h3 {
+        font-size: 1.6em;
+    }
+
+    .pic{
+        flex-direction: column;
+    }
+
+    .main-btn {
+        font-size: 1em;
+        padding: 0.8em 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .social a {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects .card {
+        width: 90%;
+        margin: 20px 0;
+    }
+
+    #resume .card {
+        width: 90%;
+        margin: 20px 0;
+    }
+    #skills .content .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: center;
+    }
+
+}
