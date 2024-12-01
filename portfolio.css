@@ -24,9 +24,6 @@ header {
     font-weight: 700;
     font-size: 1.8em;
 }
-.navi{
-    position: sticky;
-}
 
 .navi a {
     text-decoration: none;
@@ -45,16 +42,17 @@ section {
     padding: 100px 200px;
 }
 
-.sec1{
+.sec1 {
     max-height: 100vh;
 }
+
 .main {
     width: 100%;
     max-height: 46rem;
     display: flex;
     align-items: center;
-    justify-content:  space-around; 
-    background: rgb(14, 14, 14, 0.99);
+    background: rgb(14, 14, 14);
+    justify-content: space-between;
 }
 
 .main h2 {
@@ -79,7 +77,7 @@ section {
     margin-bottom: 30px;
 }
 
-.main .pic img{
+.main .pic img {
     max-width: 100%;
     border-radius: 900px;
     max-height: 100vh;
@@ -88,10 +86,11 @@ section {
     margin-left: 230px;
 }
 
-.pic{
+.pic {
     margin-bottom: 200px;
     max-width: 560px;
 }
+
 .main-btn {
     color: whitesmoke;
     background-color: #FA4EAB;
@@ -178,10 +177,6 @@ section {
     font-weight: 600;
     color: whitesmoke;
     margin-top: 10px;
-}
-
-#projects{
-    background-color: #f9f9f9;
 }
 
 #projects .content {
@@ -359,11 +354,11 @@ button:hover {
     #skills h2,
     #projects h2,
     #resume h2,
-    #contact h2{
+    #contact h2 {
         font-size: 1.8em;
     }
 
-    section{
+    section {
         padding: 80px 20px;
     }
 
@@ -379,7 +374,7 @@ button:hover {
         font-size: 1.6em;
     }
 
-    .pic{
+    .pic {
         flex-direction: column;
     }
 
@@ -394,7 +389,7 @@ button:hover {
         padding: 15px;
     }
 
-    .content{
+    .content {
         flex-direction: column;
         align-items: center;
     }
@@ -408,6 +403,7 @@ button:hover {
         width: 90%;
         margin: 20px 0;
     }
+
     #skills .content .row {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
