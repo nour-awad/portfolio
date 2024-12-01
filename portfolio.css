@@ -25,6 +25,10 @@ header {
     font-size: 1.8em;
 }
 
+.navi {
+    position: sticky;
+}
+
 .navi a {
     text-decoration: none;
     color: black;
@@ -51,8 +55,8 @@ section {
     max-height: 46rem;
     display: flex;
     align-items: center;
-    background: rgb(14, 14, 14);
-    justify-content: space-between;
+    justify-content: space-around;
+    background: rgb(14, 14, 14, 0.99);
 }
 
 .main h2 {
@@ -177,6 +181,10 @@ section {
     font-weight: 600;
     color: whitesmoke;
     margin-top: 10px;
+}
+
+#projects {
+    background-color: #f9f9f9;
 }
 
 #projects .content {
