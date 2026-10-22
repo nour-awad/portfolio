@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0d0b0c;
+  --color-raised: #161315;
+  --color-raised-2: #1d191b;
+  --color-line: #2b2528;
+  --color-fg: #f5f0f2;
+  --color-muted: #aba1a6;
+  --color-dim: #756c71;
+  --color-pink: #fa4eab;
+  --color-pink-deep: #c42f80;
+
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+  --font-display: var(--font-instrument), "Iowan Old Style", Georgia, serif;
+}
+
+html {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Film grain over everything — keeps the large dark fields from feeling flat. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--color-pink);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-pink);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scroll-driven reveal: pure CSS, and content stays visible where unsupported. */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+
+  .rise {
+    animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(var(--i, 0) * 90ms);
+  }
+
+  .draw-path {
+    stroke-dasharray: var(--len);
+    stroke-dashoffset: var(--len);
+    animation: draw 2.4s 0.4s cubic-bezier(0.45, 0, 0.2, 1) forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
